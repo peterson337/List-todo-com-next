@@ -12,7 +12,7 @@ export const List = () => {
 
   const getTodos = async () => {
     try {
-      const response = await fetch('http://localhost:5000/todos/');
+      const response = await fetch('https://list-todo-9hqo.onrender.com/todos/');
       const data = await response.json();
       setTodos(data);
     } catch (error) {
@@ -27,7 +27,7 @@ export const List = () => {
 
   const deleteTodo = async (id: number | null) => {
     try {
-      const response = await fetch(`http://localhost:5000/todos/${id}`, {
+      const response = await fetch(`https://list-todo-9hqo.onrender.com/todos/${id}`, {
         method: 'DELETE',
       });
       setTodos(todos.filter((todo) => todo.todo_id !== id));
