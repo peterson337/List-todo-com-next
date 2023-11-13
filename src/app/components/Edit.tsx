@@ -18,7 +18,7 @@ export const Edit = ({todos, setIsOpenModalEditarTarefa, armazenarId} : any) => 
         e.preventDefault();
         try{
             const body = {description};
-            const response = await fetch(`http://localhost:5000/todos/${armazenarId}`, {
+            const response = await fetch(`https://list-todo-9hqo.onrender.com/todos/${armazenarId}`, {
                 method: 'PUT',                
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(body)
